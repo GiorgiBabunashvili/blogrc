@@ -1,5 +1,8 @@
 import React from "react";
 import Slide from "../Slide/Slide";
+import Card from "./Card";
+import Footer from "../Footer/Footer";
+import CardTwo from "./CardTwo";
 
 const BlogHome = () => {
   const data = [
@@ -21,7 +24,7 @@ const BlogHome = () => {
         <div className="left-content">
           {data.map((value) => {
             return (
-              <div className="content">
+              <div className="content" key={value.id}>
                 <div className="logo">
                   <h1>M</h1>
                 </div>
@@ -47,6 +50,9 @@ const BlogHome = () => {
         </div>
         <div className="right-content">
           <Slide />
+          <Card />
+          <CardTwo />
+          <Footer />
         </div>
       </section>
     </>
